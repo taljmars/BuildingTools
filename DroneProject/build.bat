@@ -18,8 +18,10 @@ echo f | xcopy /f /y %TAKEDIR%\..\DroneGCS\ClientInstallation\Linux-32\Console-*
 echo f | xcopy /f /y %TAKEDIR%\..\DroneServer\ServerInstallation\Linux\ServerCore-*-linux.tar %TAKEDIR%\Linux32\ServerCore-1.%BLDVERSION%-linux.tar
 
 
-echo --------------- Pushing --------------
+echo --------------- Fetching --------------
+git.exe fetch --no-tags --progress https://github.com/taljmars/StandaloneDroneGCS +refs/heads/*:refs/remotes/origin/* --depth=19
 
+echo --------------- Pushing --------------
 @ECHO Build-%BLDVERSION% > %TAKEDIR%\version
 
 :: git status
