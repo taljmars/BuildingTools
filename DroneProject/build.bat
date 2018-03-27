@@ -17,13 +17,4 @@ del %TAKEDIR%\Linux32\*.tar
 echo f | xcopy /f /y %TAKEDIR%\..\DroneGCS\ClientInstallation\Linux-32\Console-*-linux-x32.tar %TAKEDIR%\Linux32\Console-1.%BLDVERSION%-linux-x32.tar
 echo f | xcopy /f /y %TAKEDIR%\..\DroneServer\ServerInstallation\Linux\ServerCore-*-linux.tar %TAKEDIR%\Linux32\ServerCore-1.%BLDVERSION%-linux.tar
 
-
-echo --------------- Pushing --------------
-@ECHO Build-%BLDVERSION% > %TAKEDIR%\version
-
-git status
-git add *
-git commit -m "Building standalone package for Build-%BLDVERSION%"
-git status
-
 @ECHO Done
