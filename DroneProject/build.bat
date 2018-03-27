@@ -21,12 +21,17 @@ echo f | xcopy /f /y %TAKEDIR%\..\DroneServer\ServerInstallation\Linux\ServerCor
 echo --------------- Fetching --------------
 git.exe clone https://github.com/taljmars/BuildingTools.git tmp
 cd tmp\DroneProject
+
+@ECHO Build-%BLDVERSION% > version
+
+
 git status
 git add *
 git commit -m "Building standalone package for Build-%BLDVERSION%"
 git status
 git push -u origin master
 :: git.exe fetch --no-tags --progress https://github.com/taljmars/StandaloneDroneGCS +refs/heads/*:refs/remotes/origin/* --depth=19
+cd ..\..
 
 echo --------------- Pushing --------------
 @ECHO Build-%BLDVERSION% > %TAKEDIR%\version
