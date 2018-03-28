@@ -6,9 +6,9 @@ shift
 
 @ECHO Build is %BLDVERSION% 
 
-echo --------------- Windows 64 --------------
-del %TAKEDIR%\Windows64\*.zip
-echo f | xcopy /f /y %TAKEDIR%\..\DroneGCS\ClientInstallation\Windows64-lite\Console-*-win-x64.zip %TAKEDIR%\Windows64-lite\Console-1.%BLDVERSION%-win-x64.zip
+echo --------------- Windows 64 - Lite --------------
+del %TAKEDIR%\Windows64-lite\*.zip
+echo f | xcopy /f /y %TAKEDIR%\..\DroneGCS\ClientInstallation\Windows64\Console-*-win-x64.zip %TAKEDIR%\Windows64-lite\Console-1.%BLDVERSION%-win-x64.zip
 echo f | xcopy /f /y %TAKEDIR%\..\DroneServer\ServerInstallation\Windows64-lite\ServerCore-*-win-x64.zip %TAKEDIR%\Windows64-lite\ServerCore-1.%BLDVERSION%-win-x64.zip
 
 ::echo --------------- Linux --------------
