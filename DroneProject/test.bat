@@ -16,7 +16,7 @@ shift
 @ECHO %PWD%
 
 @ECHO --------------- Windows 64 Tester --------------
-@ECHO f | xcopy /f /y %TAKEDIR%\Windows64\* %TESTPATH%\
+@ECHO f | xcopy /f /y %TAKEDIR%\Windows64-lite\* %TESTPATH%\
 @CD %TESTPATH%
 @CALL install.bat
 
