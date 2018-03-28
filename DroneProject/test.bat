@@ -8,9 +8,16 @@ shift
 
 @SET TESTPATH=%TAKEDIR%\..\tmp
 
-mkdir %TESTPATH%
+@RMDIR /s /q %TESTPATH%
+@MKDIR %TESTPATH%
 
-echo --------------- Windows 64 Tester --------------
-echo f | xcopy /f /y %TAKEDIR%\Windows64\* %TESTPATH%\
+@ECHO get current directory
+@SET PWD=%cd%
+@ECHO %PWD%
+
+@ECHO --------------- Windows 64 Tester --------------
+@ECHO f | xcopy /f /y %TAKEDIR%\Windows64\* %TESTPATH%\
+@CD %TESTPATH%
+@CALL install.bat
 
 @ECHO Done
