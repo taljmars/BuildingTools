@@ -21,6 +21,6 @@ shift
 @ECHO INSTALLING
 @CALL install.bat
 @ECHO RUNNING
-@CALL run-tester.bat
+@CALL run-auto-tester.bat
 
 @ECHO Done
