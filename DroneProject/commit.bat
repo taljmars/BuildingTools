@@ -2,9 +2,9 @@
 @ECHO off
 @SET TAKEDIR=%1
 @SET BLDVERSION=%2
-shift
+@SHIFT
 
-echo --------------- Pushing --------------
+@ECHO --------------- Pushing --------------
 @ECHO Build-%BLDVERSION% > %TAKEDIR%\version
 
 git status
